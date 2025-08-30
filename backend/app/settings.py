@@ -1,4 +1,3 @@
-# app/settings.py
 from __future__ import annotations
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List

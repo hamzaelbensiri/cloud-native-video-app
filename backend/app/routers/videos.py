@@ -28,7 +28,7 @@ if settings.AZURE_STORAGE_CONNECTION_STRING:
         try:
             _container_client.create_container()
         except Exception:
-            pass  # already exists
+            pass  
     except ImportError:
         # Azure libs not installed -> fall back to local filesystem
         _blob_service = None

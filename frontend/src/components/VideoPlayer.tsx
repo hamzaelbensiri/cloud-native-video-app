@@ -12,14 +12,7 @@ type Props = {
   showPreviewBadge?: boolean;
 };
 
-/**
- * Cinematic player with:
- * - Stable height (aspect-video) to prevent layout shift before metadata loads
- * - Shimmer placeholder + optional "Preview" overlay until first play
- * - Center play button overlay when paused
- * - Bottom control bar (play/pause, mute, time, fullscreen) with auto-hide
- * - Hides native "big play" overlays for consistent look
- */
+
 export default function VideoPlayer({
   src,
   poster,

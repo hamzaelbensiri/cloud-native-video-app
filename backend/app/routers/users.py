@@ -39,7 +39,7 @@ def update_user(user_id: int, user_update: schemas.UserUpdate, db: Session = Dep
         if existing and existing.user_id != user_id:
             raise HTTPException(status_code=400, detail="Email already in use")
 
-    # if you later allow username updates, add a similar check
+    
 
     for k, v in payload.items():
         setattr(db_user, k, v)
@@ -64,7 +64,7 @@ def set_my_role(
     Let a logged-in user choose between 'consumer' and 'creator' for themselves.
     Never allow self-escalation to admin.
     """
-    # Normalize to model enum
+  
     role_value = getattr(payload.role, "value", payload.role)
 
     if role_value not in (models.UserRole.consumer.value, models.UserRole.creator.value):

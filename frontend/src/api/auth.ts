@@ -11,7 +11,7 @@ export type User = {
 type LoginResponse = {
   access_token: string;
   token_type: 'bearer' | string;
-  // some backends also include a user object; we won't rely on it
+ 
   user?: User;
 };
 

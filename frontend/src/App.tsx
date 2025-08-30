@@ -33,7 +33,7 @@ import {
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-/** Small helper to portal children to <body> */
+
 function Portal({ children }: { children: React.ReactNode }) {
   if (typeof document === 'undefined') return null;
   return createPortal(children, document.body);

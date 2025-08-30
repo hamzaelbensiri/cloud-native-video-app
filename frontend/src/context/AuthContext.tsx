@@ -17,7 +17,7 @@ type AuthContextType = {
   clearAuth: () => void;
   hydrateUser: () => Promise<void>;
 
-  // NEW
+  
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
 };
@@ -96,7 +96,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await hydrateUser(); // confirm user/role from server
   }, [hydrateUser]);
 
-  // ✅ NEW: login using form-encoded /auth/login (OAuth2PasswordRequestForm) 
+  
   const login = useCallback(async (email: string, password: string) => {
     const body = new URLSearchParams();
     body.set('username', email);   // backend reads 'username' as email

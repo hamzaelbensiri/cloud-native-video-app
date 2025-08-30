@@ -49,7 +49,7 @@ export default function AdminReports() {
   const loading = dbgQ.isPending || usersQ.isPending || vidsQ.isPending;
 
   const env = pickEnv(dbgQ.data || {});
-  const dbgUnavailable = !env.ENV && !env.UPLOAD_DIR; // endpoint likely missing
+  const dbgUnavailable = !env.ENV && !env.UPLOAD_DIR; 
 
   return (
     <div className="bg-radial-vignette">

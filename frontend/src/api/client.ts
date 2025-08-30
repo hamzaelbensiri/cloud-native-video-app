@@ -4,7 +4,7 @@ const baseURL = import.meta.env.VITE_API_URL?.replace(/\/+$/, '') || '';
 
 export const api = axios.create({
   baseURL,
-  // Do not set global Content-Type here; set per request instead.
+  
   withCredentials: false,
 });
 

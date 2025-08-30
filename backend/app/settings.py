@@ -11,14 +11,14 @@ class Settings(BaseSettings):
 
     # --- DB ---
     # For free Azure (SQLite on /home). Later we can swap to Azure SQL DSN.
-    # Example: sqlite:////home/site/wwwroot/dev.db
+    
     DATABASE_URL: str
 
     # --- Auth ---
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     # --- CORS (list of origins) ---
-   
+    
     CORS_ORIGINS: List[str] = []
 
     # --- Storage ---

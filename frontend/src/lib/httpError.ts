@@ -1,7 +1,7 @@
 export function getHttpErrorMessage(err: any): string {
   // Axios network error or CORS/preflight failure -> no response object
   if (err?.code === 'ERR_NETWORK' || (!err?.response && err?.message)) {
-    // Common hints: CORS blocked request or gateway dropped large payload
+    //  CORS blocked request or gateway dropped large payload
     return `Network/CORS error: ${err.message}. Check CORS and request size limits.`;
   }
 

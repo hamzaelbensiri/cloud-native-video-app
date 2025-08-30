@@ -15,15 +15,13 @@ def get_user_by_username(db: Session, username: str):
 def create_user(db: Session, user: schemas.UserCreate):
     hashed_pw = hash_password(user.password)
 
-    # If the incoming model has a "role" attribute (e.g., you temporarily kept it in the schema),
-    # use it; otherwise default to consumer. Also cast to the SQLAlchemy enum.
-    incoming_role = getattr(user, "role", None)          # could be enums.UserRole or str or None
+    incoming_role = getattr(user, "role", None)          
     role_value = getattr(incoming_role, "value", incoming_role) or models.UserRole.consumer.value
     db_user = models.User(
         email=user.email,
         username=user.username,
         hashed_password=hashed_pw,
-        role=models.UserRole(role_value),                 # ensure proper enum instance
+        role=models.UserRole(role_value),                 
     )
     db.add(db_user)
     db.commit()

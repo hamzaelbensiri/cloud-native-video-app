@@ -40,11 +40,11 @@ A full-stack, cloud-ready video platform where users can register/login, upload 
 ```
 ┌────────────────────────────┐        ┌───────────────────────────────┐
 │         React (Vite)       │  HTTPS │            FastAPI            │
-│  - React Router            │ <──────┤  - Auth (JWT)                │
-│  - React Query             │        │  - Videos / Comments /       │
-│  - Tailwind + shadcn/ui    │        │    Ratings APIs              │
-│  - Axios (interceptors)    │        │  - Role guards, CORS         │
-└──────────────┬─────────────┘        │  - SQLAlchemy ORM            │
+│  - React Router            │ <──────┤  - Auth (JWT)                 │
+│  - React Query             │        │  - Videos / Comments /        │
+│  - Tailwind + shadcn/ui    │        │    Ratings APIs               │
+│  - Axios (interceptors)    │        │  - Role guards, CORS          │
+└──────────────┬─────────────┘        │  - SQLAlchemy ORM             │
                │                      └──────┬────────────────────────┘
                │                             │
                │                             ▼

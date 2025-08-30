@@ -47,7 +47,7 @@ export type VideoUpdate = Partial<
   Pick<Video, 'title' | 'publisher' | 'producer' | 'genre' | 'age_rating' | 'blob_uri'>
 >;
 
-/** JSON update — NOT multipart */
+
 export async function updateVideo(id: number, changes: VideoUpdate): Promise<Video> {
   const { data } = await api.put<Video>(`/videos/${id}`, changes, {
     headers: { 'Content-Type': 'application/json' },

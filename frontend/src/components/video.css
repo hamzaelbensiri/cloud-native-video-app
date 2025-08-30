@@ -1,0 +1,9 @@
+/* Hide native "big play" overlay in WebKit/Blink so only our custom overlay shows */
+.vp-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.vp-video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}

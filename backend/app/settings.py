@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str
 
     # --- DB ---
-    # For free Azure (SQLite on /home). Later you can swap to Azure SQL DSN.
+    # For free Azure (SQLite on /home). Later we can swap to Azure SQL DSN.
     # Example: sqlite:////home/site/wwwroot/dev.db
     DATABASE_URL: str
 
@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     # --- CORS (list of origins) ---
-    # In App Service, put a JSON array string: ["https://your-frontend","http://localhost:5173"]
+   
     CORS_ORIGINS: List[str] = []
 
     # --- Storage ---
